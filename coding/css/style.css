@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --primary-color: #550FED;
+    --secondary-color: #CCB7F9;
+    --black: #1E1E1E;
+    --gray: #716C7C;
+    --border: #C8C2D6;
+    --background: #F2F4F5; 
+}
+
+html{
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* reset */
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+ul, li{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+/* fim do reset */
+
+header{
+    background-color: var(--primary-color);
+    padding: 28px 64px;
+}
+
+    @media(max-width:1024px){
+        header{
+            padding:28px 38px;
+        }
+    }
+
+.container{
+    width: 1205px;
+    margin: 0px auto;
+}
+
+    @media (max-width: 1024px){
+        .container{
+            width: 100%;
+        }
+    }
+
+.display-flex{
+    display: flex;
+}
+
+
+nav{
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+    margin-bottom: 84px;
+}
+
+nav ul{
+    gap: 74px;
+}
+
+    @media (max-width:1024px){
+        nav ul{
+           display: none !important;
+        }
+    }
+
+nav ul li a{
+    color: var(--secondary-color);
+    transition: color 0.2s;
+}
+
+nav ul li a:hover{
+    color: var(--black);
+}
+
+nav .menu-hamburguer {
+    display: none;
+}
+
+    @media (max-width: 1024px){
+        nav .menu-hamburguer{
+            display: block;
+        }
+    }
+
+nav .menu-hamburguer span{
+    height: 4px;
+    width: 24px;
+    background-color: white;
+    display:block;
+    margin-bottom: 4px;
+}
+
+   
+.caixa-de-busca{
+    text-align: center;
+    padding: 63px;
+}
+
+div h2{
+    color: white;
+    text-align: center;
+}
+
+form{
+    background-color: white;
+    width: 843px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    border-radius: 8px;
+}
+
+form button{
+    background-color: var(--black);
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    padding: 14px 82px;
+    border-radius: 8px;
+}
+
+form input{
+    background-color: transparent;
+    width: 72%;
+    border: none;
+    height: 35px;
+}
