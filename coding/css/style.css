@@ -109,6 +109,9 @@ nav .menu-hamburguer span{
     padding: 63px;
 }
 
+   
+
+   
 div h2{
     color: white;
     text-align: center;
@@ -116,11 +119,18 @@ div h2{
 
 form{
     background-color: white;
-    width: 843px;
+    width: 100%;
+    max-width:843px;
     margin: 0 auto;
     padding: 20px 24px;
     border-radius: 8px;
 }
+
+    @media ( max-width:744){
+        form{
+            max-width:100%
+        }
+    }
 
 form button{
     background-color: var(--black);
@@ -137,3 +147,8 @@ form input{
     border: none;
     height: 35px;
 }
+    @media(max-width: 744px){
+        form input{
+            width:60%;
+        }
+    }
