@@ -13,9 +13,13 @@ html{
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-style: normal;
+   
+}
+htm, body{
+    height: 100%;
+    margin:0;
 }
 
-/* reset */
 body{
     padding: 0px;
     margin: 0px;
@@ -37,9 +41,9 @@ header{
     padding: 28px 64px;
 }
 
-    @media(max-width:1024px){
+    @media(max-width: 1024px){
         header{
-            padding:28px 38px;
+            padding: 28px 38px;
         }
     }
 
@@ -48,7 +52,7 @@ header{
     margin: 0px auto;
 }
 
-    @media (max-width: 1024px){
+    @media(max-width: 1024px){
         .container{
             width: 100%;
         }
@@ -58,77 +62,84 @@ header{
     display: flex;
 }
 
-
 nav{
     justify-content: space-between;
     align-items: center;
-    padding: 28px 0;
+
     margin-bottom: 84px;
 }
 
 nav ul{
-    gap: 74px;
+    gap: 72px;
 }
 
-    @media (max-width:1024px){
+    @media (max-width: 1024px) {
         nav ul{
-           display: none !important;
+            display: none !important;
         }
     }
 
 nav ul li a{
     color: var(--secondary-color);
-    transition: color 0.2s;
 }
 
 nav ul li a:hover{
     color: var(--black);
 }
 
-nav .menu-hamburguer {
+nav .menu-hamburguer{
     display: none;
 }
 
-    @media (max-width: 1024px){
+    @media (max-width:  1023px){
         nav .menu-hamburguer{
             display: block;
         }
+         
+    
     }
 
 nav .menu-hamburguer span{
     height: 4px;
     width: 24px;
     background-color: white;
-    display:block;
+    display: block;
     margin-bottom: 4px;
 }
 
-   
-.caixa-de-busca{
-    text-align: center;
-    padding: 63px;
-}
-
-   
-
-   
 div h2{
     color: white;
     text-align: center;
 }
 
 form{
+    display:flex;
     background-color: white;
     width: 100%;
-    max-width:843px;
+    max-width: 843px;
     margin: 0 auto;
     padding: 20px 24px;
     border-radius: 8px;
+    box-sizing: border-box;
+    gap: 12px;
 }
 
-    @media ( max-width:744){
+    @media(max-width: 744px){
         form{
-            max-width:100%
+            flex-direction: column;
+            gap: 12px;
+            
+        }
+        form button, form input{
+            justify-content: center;
+            width: 100%;
+          
+            }
+
+        form button{
+            padding: 12px 0px;
+          
+            
         }
     }
 
@@ -137,8 +148,14 @@ form button{
     color: white;
     text-transform: uppercase;
     border: none;
-    padding: 14px 82px;
+    padding: 14px 24px;
     border-radius: 8px;
+    display: inline-flex;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    cursor:pointer
+    
+
 }
 
 form input{
@@ -146,9 +163,210 @@ form input{
     width: 72%;
     border: none;
     height: 35px;
+    flex: 1;
+    font-size: 16px;
+    outline:none;
+    
 }
-    @media(max-width: 744px){
+
+    @media (max-width: 744px){
         form input{
-            width:60%;
+            width: 63%;
         }
+    }
+
+/* Responsive */
+
+   
+    
+.botao{
+    display:none;
+}
+     
+    @media(max-width: 314px){
+        .botao{
+            display:block;
+              
+        }
+      
+        form button{
+            display:none;
+        }
+    }
+
+
+    main{
+        height: 170px ;
+        width: 1205px;
+        margin: 0px auto;
+        
+    }
+
+    main .card{
+        display:flex;
+        gap: 36px;
+        
+    }
+    .card div{
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        align-content: center;
+        padding:  0px 0px 20px 0;
+
+    }
+
+    .card h3,a{
+        text-align:justify;
+        padding: 0px 20px ;
+        margin: 18px 0px 12px;
+        gap:0px;
+       
+    }
+    .card p{
+        padding: 0px 20px ;
+        margin:10px 0px 14px;
+    }
+    .card a{
+        text-decoration: none;
+        color: var(--black);
+        /*font-size: 16px; */
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+  
+
+    main h5{
+        font-size: 40px;
+        font-weight: bold;
+
+    }
+    main .alagoas, .bahia{
+        background-color:#CCB7F9;
+        color: var(--primary-color);
+        gap:10px;
+        padding: 8px;
+        text-align:left;
+        border-radius: 4px;
+        height: 10px;
+        
+    }
+    .linha{
+        border:none;
+        margin:10px 0px 20px;
+    }
+    .gap{
+        border:none;
+        margin:20px 0px;
+    }
+    .mais{
+        background-color: var(--primary-color);
+        color: white;
+        height:48px;
+        width: 223px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .destino {
+        display:flex;
+        background-image:url('images/barra.png');
+        justify-content: center;
+      
+        
+    
+   
+    }
+    .barra{
+       margin:19px 0px 0px 250px;
+    }
+   
+    .visao{
+        font-weight:bold;
+    }
+
+    .rodape{
+        display:flex;
+        position: relative;
+        top: 1dvb;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 20px;
+        height: 170px;
+        border: 2px solid #C8C2D6;
+        border-radius: 10px;
+    }
+
+    .footer{
+        position: relative;
+        top: 5px;
+        display:flex;
+        text-align: center;
+        justify-content: space-between;
+        height: 115px;;
+        width: 1100px;
+        
+    }
+    
+    .footer h5{
+        
+        font-weight: bold;
+        font-size: 16px;;
+        margin: 26px auto 12px;
+    }
+    .footer p{
+        color: #716C7C;
+        font-size:24px ;
+        margin: 0px 0px 53px;
+    }
+    .reta{
+        border:none;
+        margin:0px 0px 50px;
+    }
+    .footer h5, p{
+        gap:56px
+    }
+    .divisao{
+      
+    position: relative;
+     
+       
+    }
+    .divisao{
+        margin-top: 31px;
+        height: 70px;
+        width: 1px;
+        background-color: #C8C2D6;
+        
+        
+      
+    }
+    .ultimo {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+   
+    .ultimo div{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+    }
+    
+    .f {
+        display: flex;
+        flex-direction: column;
+     
+      
+    }
+    
+
+    
+    .f a{
+        text-align: top;
+        margin:0px;
+        padding: 0;
+        text-align: center;
+
     }
